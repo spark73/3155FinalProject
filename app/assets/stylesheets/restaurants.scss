@@ -1,0 +1,152 @@
+// Place all the styles related to the Restaurants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+input[type=text]{
+    width: 25%;
+    padding: 12px 12px;
+    border: 2px solid #ccc;
+    background-color: #f8f8f8;
+    border-color: #a69667 ;
+}
+
+body {
+    background-color: #d8d8d8;
+    color: #004525;
+}
+
+a:link, a:visited{
+     color: #DAA520;   
+}// Place all the styles related to the Restaurants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+input[type=text]{
+    width: 25%;
+    padding: 12px 12px;
+    border: 2px solid #ccc;
+    background-color: #f8f8f8;
+    border-color: #a69667 ;
+}
+
+textarea{
+    width: 50%;
+    height: 100px;
+    padding: 12px 12px;
+    border: 3px solid #ccc;
+    background-color: #f8f8f8;
+    resize: none;
+    border-color: #a69667;
+}
+
+input[type=button], input[type=submit]{
+    background-color: #a69667;
+    float: right;
+    border: none;
+    color: #004525;
+    padding: 12px 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+a:link, a:visited{
+     color: #004525;   
+}
+h1{
+    text-align:center;
+}
+
+#menu{
+ text-align: left;
+ height: auto;
+ margin: 0 auto;
+ padding: 0;
+ border-style: solid;
+ border-top-right-radius: 80px 80px;
+ border-color: #a69667;
+ border-top-left-radius: 80px 80px;
+}
+#namespace{
+    float: left;
+    position: absolute;
+}
+#caloriesspace{
+    float: left;
+    position: absolute;
+    left: 47%;
+}
+#pricespace{
+    float: left;
+    position: absolute;
+    left: 89%;
+}
+#list{
+    display :table; margin: 0 auto;
+    border-style: solid;
+    border-color: #a69667;
+    border-width: 10px;
+    border-radius: 25px;
+}
+h2{
+    display :table; margin: 0 auto;
+    font-family: Trebuchet MS, sans-serif;
+  border-bottom: 2px solid #a69667;
+  float: center;
+  font-size: 15px;
+  font-family: Trebuchet MS, sans-serif;
+  padding: 0px 15px;
+  color: #004525;
+  //background:  #f2f2f2;
+}
+#line{
+    border-bottom: dotted;
+    border-color: #000000;
+    
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #004525;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: #004525;
+}
+
+table {
+  border-collapse: collapse;
+}
+table, tr, td {
+  font-family: Trebuchet MS, sans-serif;
+  border: 2px solid #a69667;
+  float: center;
+  font-size: 15px;
+  font-family: Trebuchet MS, sans-serif;
+  padding: 0px 15px;
+  color: #004525;
+  background:  #f2f2f2;
+}
+
+h3{
+    display :table; margin: 0 auto;
+    font-family: Trebuchet MS, sans-serif;
+  border-bottom: 2px solid #a69667;
+  float: center;
+  font-size: 20px;
+  font-family: Trebuchet MS, sans-serif;
+  padding: 0px 15px;
+  color: #004525;
+  //background:  #f2f2f2;
+}

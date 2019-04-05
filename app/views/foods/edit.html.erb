@@ -1,0 +1,24 @@
+<h2>Edit the Menu</h2>
+
+<%= form_for([@restaurant, @food]) do |r| %>
+    <p>
+        <%= r.label 'Name of Food' %><br>
+        <%= r.text_field :name %>
+    </p>
+    
+    <p>
+        <%= r.label :calories %><br>
+        <%= r.text_field :calories %>
+    </p>
+    
+    <p>
+        <%= r.label :price %><br>
+        <%= r.text_field :price %>
+    </p>
+    
+    <p>
+        <%= r.submit "Update" %>
+    </p>
+    
+<% end %>
+<%= link_to 'Back', restaurant_path(@restaurant) %>

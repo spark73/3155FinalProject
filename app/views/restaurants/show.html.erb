@@ -1,0 +1,63 @@
+  <div class="topnav">
+  <title>App Name Here</title>
+  <%= link_to 'Home', controller: 'restaurants' %>
+  <a href="/restaurants/1">Bojangles</a>
+  <a href="/restaurants/3">Wendy's</a>
+  <a href="/restaurants/4">Chick-fil-a</a>
+  <a href="/restaurants/5">Feisty's</a>
+  <a href="/restaurants/6">Panda Express</a>
+  <a href="/restaurants/7">Mondo's Sub</a>
+  <a href="/restaurants/8">Papa John's</a>
+  <a href="/restaurants/9">Salsarita's</a>
+  <a href="/restaurants/10">Sambazon</a>
+  <a href="/restaurants/11">Starbucks</a>
+  <a href="/restaurants/12">Subway</a>
+</div> 
+<h1><%=@restaurant.name%></h1><br>
+<div id="menu">
+<h3>&ensp;Menu</h3>
+    <% @foods.each do |food| %>
+    <p>
+        <div id="namespace">&ensp;&ensp;<%= food.name %></div> <div id="caloriesspace"><strong>Calories:</strong> <%= food.calories %></div>
+        <div id="pricespace"><strong>Price: $</strong><%= food.price %></div><br>
+        <%= link_to 'edit', edit_restaurant_food_path(@restaurant.id, food.id) %> 
+    </p><br>
+    
+    <% end %>
+
+    </div>
+<br>
+<%= link_to 'Add to the menu', new_restaurant_food_path(@restaurant) %>
+
+<h3>Add a comment: </h3>
+<%= form_for([@restaurant, @restaurant.comments.build]) do |r| %>
+    <p>
+        <%= r.label 'Your Name' %><br>
+        <%= r.text_field :commenter %>
+    </p>
+    
+    <p>
+        <%= r.label 'Your Comment' %><br>
+        <%= r.text_area :body %>
+    </p>
+    
+    <p>
+        <%= r.submit %>
+    </p>
+<% end %>  
+<br><br><br>
+
+<h2>Comment Section</h2>
+    <% @restaurant.comments.each do |comment| %>
+    <p>
+        <strong>Commenter:</strong>
+        <%= comment.commenter %>
+    </p>
+    
+    <div id="line">
+    <p>
+    <%= comment.body %>
+    </p>
+    </div>
+    
+    <% end %>

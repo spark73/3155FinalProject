@@ -1,0 +1,44 @@
+<%= form_for @restaurant do |r| %>
+  <div class="topnav">
+  <title>App Name Here</title>
+  <%= link_to 'Home', controller: 'restaurants' %>
+  <a href="/restaurants/1">Bojangles</a>
+  <a href="/restaurants/3">Wendy's</a>
+  <a href="/restaurants/4">Chick-fil-a</a>
+  <a href="/restaurants/5">Feisty's</a>
+  <a href="/restaurants/6">Panda Express</a>
+  <a href="/restaurants/7">Mondo's Sub</a>
+  <a href="/restaurants/8">Papa John's</a>
+  <a href="/restaurants/9">Salsarita's</a>
+  <a href="/restaurants/10">Sambazon</a>
+  <a href="/restaurants/11">Starbucks</a>
+  <a href="/restaurants/12">Subway</a>
+</div> 
+  <% if @restaurant.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@restaurant.errors.count, "error") %> prohibited
+        this restaurant from being saved:
+      </h2>
+      <ul>
+        <% @restaurant.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <p>
+        <%= r.label 'Restaurant Name' %><br>
+        <%= r.text_field :name %>
+    </p>
+    <p>
+       <%= r.label 'Image Path' %><br>
+       <%= r.text_field :image %>
+    </p>
+    
+<p>
+    <%= r.submit %>
+</p>
+    
+<% end %>

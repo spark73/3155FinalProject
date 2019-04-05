@@ -1,0 +1,17 @@
+<h1>Fast Food on Campus</h1>
+<h2>List of fast food restaurants</h2><br>
+<div id="list"><table>
+    <th>Restaurant Name</th>
+    
+    <% @restaurants.each do |restaurant| %>
+    <tr>
+        <td><%=restaurant.name%></td>
+        <td><%=link_to image_tag(restaurant.image), restaurant_path(restaurant)%></td>
+        <td><%=link_to 'edit', edit_restaurant_path(restaurant)%></td>
+        <td><%=link_to 'delete', restaurant_path(restaurant), method: :delete, data:{confirm: 'Are you sure?'} %></td>
+    </tr>
+    <% end %>
+
+</table></div>
+<br><br>
+<%= link_to 'Add New Restaurant', new_restaurant_path %>
